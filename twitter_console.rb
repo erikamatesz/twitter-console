@@ -7,19 +7,19 @@ Dir["./config/*.rb"].each { |file| require file }
 puts `clear`
 
 while true
-    puts "What would you like to do?"
-    puts "0) Tweet something"
-    puts "1) My profile"
-    puts "2) Somebody else's profile"
-    puts "3) Search"
-    puts "4) Help"
-    puts "5) Exit"
 
-    option = Readline.readline("►► ")
-
-    options = [:new_tweet, :profile, :other_profile, :search, :help, :exit]
-    command = options[option.to_i]
-
+    command = menu(
+        "What would you like to do?",
+        { 
+            "Tweet something": :new_tweet,
+            "My profile": :profile,
+            "Somebody else's profile": :other_profile,
+            "Search": :search,
+            "Help": :help,
+            "Sair": :exit
+        }
+    )
+    
     case command
     when :new_tweet
         puts "New tweet"

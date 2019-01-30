@@ -22,17 +22,21 @@ while true
     
     case command
     when :new_tweet
-        puts "New tweet"
+        TweetConsole::new_tweet
     when :profile
-        puts "My profile"
+        TweetConsole::profile
     when :other_profile
-        puts "Somebody else's profile"
+        TweetConsole::other_profile
     when :search
-        puts "Search"
+        TweetConsole::search
     when :help
-        puts "Help"
+        TweetConsole::help
     when :exit
-        puts "Exit"
+        Printc.title "Bye bye ❤", :yellow, 2, true
         break
     end
+end
+
+rescue Interrupt => e
+    Printc.title "Bye bye ❤", :yellow, 2, true
 end

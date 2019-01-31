@@ -18,7 +18,7 @@ module TweetConsole
     option = menu(
         "What do you prefer?",
         { 
-            "Search something else": :search,
+            "More tweets": :more_tweets,
             "Return to menu": :exit,
         }
     )

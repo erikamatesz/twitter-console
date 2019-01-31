@@ -1,5 +1,5 @@
 require 'readline'
-​
+
 module TweetConsole
   def self.user_info user
     Printc.title user.name, :green, 1, true

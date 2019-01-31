@@ -1,5 +1,5 @@
 require 'readline'
-​
+
 module TweetConsole
   def self.list_tweets user_name=nil, is_me=false
     page = 1

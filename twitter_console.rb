@@ -2,7 +2,6 @@ Dir["./helpers/*.rb"].each {|file| require file }
 Dir["./commands/**/*.rb"].each {|file| require file }
 Dir["./config/*.rb"].each {|file| require file }
 
-
 puts `clear`
 
 begin
@@ -15,7 +14,7 @@ begin
         "Somebody else's profile": :other_profile,
         "Search": :search,
         "Help": :help,
-        "Sair": :exit
+        "Exit": :exit
       }
     )
 

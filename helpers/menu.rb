@@ -5,7 +5,7 @@ def menu(title, options, sleep_time=1, clear=false)
     option = nil
 
     while true
-        Printc.title "#{title}     ◼◼◼     ➤ Twitter Console <3", :green, sleep_time, clear
+        Printc.title "#{title}     ◼◼◼     ➤ Twitter Console ❤", :green, sleep_time, clear
         options.each_with_index do |(key, value), i|
             puts "#{i}) #{key}"
         end

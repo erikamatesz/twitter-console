@@ -1,7 +1,7 @@
 # twitter-console
 Command line interface to control Twitter using Ruby and Twitter API
 
-## I used...
+### I used...
 
   - colorize: https://github.com/fazibear/colorize
   - readline: https://github.com/ConnorAtherton/rb-readline
@@ -16,3 +16,5 @@ Clone project, then:
 $ cd twitter-console
 $ ruby twitter_console.rb
 ```
+
+**Commited API keys revoked. Generate your own ;)**

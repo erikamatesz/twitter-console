@@ -6,7 +6,7 @@ module TweetConsole
         while true
             Printc.title "What would you like to search?", :green, 1, true
             option = Readline.readline("►► ")
-            tweets = auth_client.search("#{option} -rt", count: 10, tweet_mode: 'extended', result_type: "recent").take(10)
+            tweets = auth_twitter.search("#{option} -rt", count: 10, tweet_mode: 'extended', result_type: "recent").take(10)
 
             tweets.each do |t|
                 puts ""

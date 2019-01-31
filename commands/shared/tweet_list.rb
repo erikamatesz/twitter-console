@@ -5,18 +5,16 @@ module TweetConsole
     page = 1
     while true
       if is_me
-        tweets = auth_client.user_timeline(page: page, count: 5, tweet_mode: 'extended')
+        tweets = auth_twitter.user_timeline(page: page, count: 5, tweet_mode: 'extended')
       else
-        tweets = auth_client.user_timeline(user_name, page: page, count: 5, tweet_mode: 'extended')
+        tweets = auth_twitter.user_timeline(user_name, page: page, count: 5, tweet_mode: 'extended')
       end
-​
       tweets.each do |t|
         puts ""
         Printc.pair("Text", t.attrs[:full_text], :yellow, :white, 0.1)
         Printc.pair("Retweets", t.retweet_count, :yellow, :white, 0.1)
         puts ""
       end
-​
     option = menu(
         "What do you prefer?",
         { 
@@ -24,7 +22,6 @@ module TweetConsole
             "Return to menu": :exit,
         }
     )
-​
       if option == :exit
         break
       elsif option == :more_tweets

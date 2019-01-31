@@ -5,7 +5,7 @@ module TweetConsole
     
         while true
 
-            user = auth_client.user
+            user = auth_twitter.user
 
             TweetConsole::user_info(user)
 

@@ -17,7 +17,10 @@ module TweetConsole
                 }
             )
 
-            if option == :exit
+            if option == :tweets
+                TweetConsole::list_tweets(nil, true)
+                break
+            elsif option == :exit
                 break
             end
 

@@ -25,6 +25,5 @@ module TweetConsole
 
         end
 
-
     end
 end
